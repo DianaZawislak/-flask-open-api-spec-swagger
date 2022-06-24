@@ -1,0 +1,54 @@
+{
+  "tests": [
+    {
+      "name": "Task 1",
+      "setup": "sudo -H pip3 install -r requirements.txt",
+      "run": "pytest --pylint ./tests/test_task1.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Task 2",
+      "setup": "sudo -H pip3 install -r requirements.txt",
+      "run": "pytest --pylint ./tests/test_task2.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Task 3",
+      "setup": "sudo -H pip3 install -r requirements.txt",
+      "run": "pytest --pylint ./tests/test_task3.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Task 4",
+      "setup": "sudo -H pip3 install -r requirements.txt",
+      "run": "pytest --pylint ./tests/test_task4.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 35
+    },
+    {
+      "name": "Task 5",
+      "setup": "sudo -H pip3 install -r requirements.txt",
+      "run": "pytest --pylint ./tests/test_task5.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 35
+    }
+  ]
+}
