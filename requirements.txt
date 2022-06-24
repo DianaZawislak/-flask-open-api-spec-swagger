@@ -1,0 +1,5 @@
+pytest
+pytest-pylint
+flask
+flask_restx
+pandas
