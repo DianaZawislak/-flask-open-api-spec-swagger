@@ -14,7 +14,7 @@ def create_app(test_config=None):
     logging_config.logging_setup()  # create and configure the app
     app = Flask(__name__)
     app.wsgi_app = ProxyFix(app.wsgi_app)
-    api = Api(version='1.0', default='Cities', default_label='Cities API', title='World Cities AP',
+    api = Api(version='1.0', default='Cities', default_label='Cities API', title='World Cities API',
               description='A simple API for World Cities',
               )
 
@@ -53,7 +53,7 @@ def create_app(test_config=None):
             for city in self.cities:
                 if city['id'] == id:
                     return city
-            api.abort(400, "Cities {} doesn't exist".format(id))
+            api.abort(404, "Cities {} doesn't exist".format(id))
 
         def create(self, data):
             city = data
@@ -92,7 +92,7 @@ def create_app(test_config=None):
         @ns.marshal_with(city, code=201)
         def post(self):
             """Create a new city"""
-            return cities_dao.create(api.payload), 200
+            return cities_dao.create(api.payload), 201
 
         @ns.route('/<int:id>')
         @ns.response(404, 'City not found')
@@ -111,7 +111,7 @@ def create_app(test_config=None):
             def delete(self, id):
                 """Delete a task given its identifier"""
                 cities_dao.delete(id)
-                return '', 200
+                return '', 204
 
             @ns.expect(city)
             @ns.marshal_with(city)

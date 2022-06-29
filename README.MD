@@ -1,8 +1,8 @@
 # Flask Open API (Swagger) UI Rest API Intro 
 
-### Name: <Insert Here>
+### Name: Diana Zawislak
 
-### UCID: <Insert Here>
+### UCID: DZ29
 
 ## Introduction
 

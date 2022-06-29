@@ -20,7 +20,7 @@ def test_task4(client):
     }
     # setup the update data
     data = {
-        'city': "Pittsburg",
+        'city': "Pittsburgh",
     }
     # setup the endpoint url for the put request
     url = '/cities/1'
